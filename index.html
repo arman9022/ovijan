@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ovijan</title>
+
+    <link href="./images/icon.png" rel="icon">
+    <link href="./images/icon.png" rel="apple-touch-icon">
+    <link href="./images/icon.png" rel="shortcut icon" type="image/x-icon">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <!--toastr css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+
+<style>
+    *{
+    font-family: "Nunito", sans-serif;
+    }
+    :root{
+    --primary-color: #076943;
+    --primary-color2: #53b949;
+    }
+    a{
+        text-decoration: none;
+        color: var(--primary-color);
+    }
+    .brandLogo{
+      width: 100px;
+      height: auto;
+    }
+    .btn-primary2 {
+
+        --bs-btn-color: #fff;
+        --bs-btn-bg: var(--primary-color);
+        --bs-btn-border-color: var(--primary-color);
+
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: var(--primary-color2);
+        --bs-btn-hover-border-color: var(--primary-color2);
+
+        --bs-btn-focus-shadow-rgb: 49,132,253;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: var(--primary-color2);
+        --bs-btn-active-border-color: var(--primary-color2);
+
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: var(--primary-color2);
+        --bs-btn-disabled-border-color: var(--primary-color2);
+
+        font-size: 1.2rem;
+        padding: .5rem 2rem;
+        font-weight: 600;
+    }
+    .nav-link {
+        display: block;
+        padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+        font-size: var(--bs-nav-link-font-size);
+        font-weight: var(--bs-nav-link-font-weight);
+        color: var(--bs-nav-link-color);
+        text-decoration: none;
+        background: 0 0;
+        border: 0;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-bottom: 2px solid transparent;
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
+    }
+    .nav-link:focus, .nav-link:hover {
+        color: var(--primary-color);
+        margin-bottom: 2px solid var(--primary-color);
+        border-bottom: 2px solid var(--primary-color);
+        transition: .2s;
+    }
+    .card{
+    cursor: pointer;
+    }
+    .card:hover{
+    color: var(--primary-color);
+    box-shadow: 0px 0px 10px var(--primary-color);
+    transition: .5s;
+    }
+    .social:hover{
+    color: var(--primary-color) !important;
+    }
+
+    .ownButtonPurple {
+        border-radius: 26px;
+        color: #fff;
+        text-align: center;
+        padding: 8px 20px;
+        border: none;
+        line-height: 24px;
+        font-size: 18px;
+        box-shadow: 0px 5px 15px -5px rgb(0 0 0 / 78%);
+        background: linear-gradient(to right,#BF00FF,#562270);
+    }
+    .ownButtonPurple:hover{
+    color: white;
+        background: linear-gradient(to right, #562270,#BF00FF);
+    }
+    .ownButtonOrange {
+        border-radius: 26px;
+        color: #fff;
+        text-align: center;
+        padding: 8px 20px;
+        border: none;
+        line-height: 24px;
+        font-size: 18px;
+        box-shadow: 0px 5px 15px -5px rgb(0 0 0 / 78%);
+        background: transparent linear-gradient(110deg, #EF512E 0%, #DE0655 100%) 0% 0% no-repeat padding-box;
+    }
+    .ownButtonOrange:hover{
+    color: white;
+        background: transparent linear-gradient(110deg, #DE0655 0%, #EF512E 100%) 0% 0% no-repeat padding-box;
+    }
+
+    .ownButtonBlue {
+        text-decoration: none;
+        border-radius: 26px;
+        color: #fff;
+        text-align: center;
+        padding: 8px 20px;
+        border: none;
+        line-height: 24px;
+        font-size: 18px;
+        box-shadow: 0px 5px 15px -5px rgb(0 0 0 / 78%);
+        background: linear-gradient(to right,var(--primary-color),var(--primary-color2));
+    }
+    .ownButtonBlue:hover{
+        color: white;
+        background: linear-gradient(to right, var(--primary-color2),var(--primary-color));
+    }
+</style>
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#" style="font-family: Acme;">
+                <img src="./images/logo.jpg" alt="Logo" class="brandLogo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="#books">Books</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+                <li><a class="dropdown-item" href="#blogs">Blogs</a></li>
+                <li><a class="dropdown-item" href="#galleries">Galleries</a></li>
+                <!--<li><hr class="dropdown-divider"></li>-->
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Account
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Login</a></li>
+                <li><a class="dropdown-item" href="#">Register</a></li>
+                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a href="#about" class="btn btn-primary2 rounded-pill">Get Started</a>
+        </div>
+      </div>
+    </nav>
+
+    <style>
+      .notices-container { overflow: hidden; }
+      .notices-list { white-space: nowrap; animation: scroll 25s linear infinite; }
+      @keyframes scroll {
+          0% { transform: translateX(100%); }
+          100% { transform: translateX(-170%); }
+      }
+    </style>
+    <section class="py-2" style="background: var(--primary-color);">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-1 col-md-2 col-3 bg-white fs-5 text-center" style="color:var(--primary-color);">Notice :</div>
+                <div class="col-xl-11 col-md-10 col-9" onmouseover="stopScroll()" onmouseout="startScroll()">
+                    <div class="notices-container">
+                        <div class="notices-list">
+                                
+                                <a  class="text-decoration-none text-white fs-5 fw-bold">
+                                    *** Abc 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </a>
+                                <a  class="text-decoration-none text-white fs-5 fw-bold">
+                                    *** Abc 2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </a>
+                                <a  class="text-decoration-none text-white fs-5 fw-bold">
+                                    *** Abc 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </a>
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var marqueeElement = document.querySelector('.notices-list');
+        function stopScroll() { marqueeElement.style.animationPlayState = 'paused'; }
+        function startScroll() { marqueeElement.style.animationPlayState = 'running'; }
+    </script>
+
+    <section id="banner" style="background: linear-gradient(to bottom,var(--primary-color),var(--primary-color2));">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 col-md-6">
+            <!--<img src="https://cdn1.byjus.com/wp-content/uploads/2023/10/Homepage_1stFold_Banner.webp" alt="" class="img-fluid">-->
+            <iframe src="https://www.facebook.com/plugins/video.php?height=420&href=https%3A%2F%2Fwww.facebook.com%2F100090221247299%2Fvideos%2F1589902991473199%2F&show_text=false&width=560&t=0" width="100%" height="350" style="border:none;overflow:hidden" class="rounded" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+            <!-- <iframe class="rounded" width="100%" height="350"
+            src="{{ str_replace('youtu.be', 'www.youtube.com/embed', $setting->intro_youtube_link) }}"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+          </div>
+          <div class="col-lg-5 col-md-6">
+
+            <div class="card p-4 my-3">
+
+                <div class="row">
+                <div class="col-12 text-center">
+                    <h3>Book your Free Session</h3>
+                    <h5>Select the Session Mode</h5>
+                </div>
+                </div>
+
+                <div class="row" id="pills-tab" role="tablist">
+                    <div class="col-6" role="presentation">
+                        <div class="row p-2">
+                        <button class="btn btn-primary2 active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Online</button>
+                        </div>
+                    </div>
+                    <div class="col-6" role="presentation">
+                        <div class="row p-2">
+                        <button class="btn btn-primary2" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Offline</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                        <form action="{{url('/contactStoreOnline')}}" method="post">
+                            <div class="row">
+                                <div class="col-12 py-2">
+                                    <label for="name">Name:</label>
+                                    <input type="text" name="name" id="name" class="form-control my-2" required>
+                                </div>
+                                <div class="col-12 pb-2">
+                                    <label for="session">Session:</label>
+                                    <select name="session" id="session" class="form-select my-2" required>
+                                      <option value="" hidden>Choose</option>
+                                      <option value="SSC Session-2024">SSC Session-2024</option>
+                                      <option value="SSC Session-2025">SSC Session-2025</option>
+                                      <option value="SSC Session-2026">SSC Session-2026</option>
+                                      <option value="SSC Session-2027">SSC Session-2027</option>
+                                      <option value="SSC Session-2028">SSC Session-2028</option>
+                                      <option value="SSC Session-2029">SSC Session-2029</option>
+                                      <option value="SSC Session-2030">SSC Session-2030</option>
+
+                                      <option value="HSC Session-2024">HSC Session-2024</option>
+                                      <option value="HSC Session-2025">HSC Session-2025</option>
+                                      <option value="HSC Session-2026">HSC Session-2026</option>
+                                      <option value="HSC Session-2027">HSC Session-2027</option>
+                                      <option value="HSC Session-2028">HSC Session-2028</option>
+                                      <option value="HSC Session-2029">HSC Session-2029</option>
+                                      <option value="HSC Session-2030">HSC Session-2030</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 pb-2">
+                                    <label for="mobile">Mobile:</label>
+                                    <input type="text" name="mobile" id="mobile" class="form-control my-2" required>
+                                </div>
+                                <div class="col-12 pb-2">
+                                    <label for="school_college">School/College:</label>
+                                    <input type="text" name="school_college" id="school_college" class="form-control my-2" required>
+                                </div>
+                                <div class="col-12 pb-2 text-center">
+                                    <button type="submit" class="btn ownButtonBlue">Submit Now</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                        <form action="{{url('/contactStoreOffline')}}" method="post">
+                            <div class="row">
+                                <div class="col-12 py-2">
+                                    <label for="name">Name:</label>
+                                    <input type="text" name="name" id="name" class="form-control my-2" required>
+                                </div>
+                                <div class="col-12 pb-2">
+                                    <label for="session">Session:</label>
+                                    <select name="session" id="session" class="form-select my-2" required>
+                                      <option value="" hidden>Choose</option>
+                                      <option value="SSC Session-2024">SSC Session-2024</option>
+                                      <option value="SSC Session-2025">SSC Session-2025</option>
+                                      <option value="SSC Session-2026">SSC Session-2026</option>
+                                      <option value="SSC Session-2027">SSC Session-2027</option>
+                                      <option value="SSC Session-2028">SSC Session-2028</option>
+                                      <option value="SSC Session-2029">SSC Session-2029</option>
+                                      <option value="SSC Session-2030">SSC Session-2030</option>
+
+                                      <option value="HSC Session-2024">HSC Session-2024</option>
+                                      <option value="HSC Session-2025">HSC Session-2025</option>
+                                      <option value="HSC Session-2026">HSC Session-2026</option>
+                                      <option value="HSC Session-2027">HSC Session-2027</option>
+                                      <option value="HSC Session-2028">HSC Session-2028</option>
+                                      <option value="HSC Session-2029">HSC Session-2029</option>
+                                      <option value="HSC Session-2030">HSC Session-2030</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 pb-2">
+                                    <label for="mobile">Mobile:</label>
+                                    <input type="text" name="mobile" id="mobile" class="form-control my-2" required>
+                                </div>
+                                <div class="col-12 pb-2">
+                                    <label for="school_college">School/College:</label>
+                                    <input type="text" name="school_college" id="school_college" class="form-control my-2" required>
+                                </div>
+                                <div class="col-12 pb-2 text-center">
+                                    <button type="submit" class="btn ownButtonBlue">Submit Now</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="py-5" style="background: #F4F4F4;">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        
+        <div class="col-md-3 col-6 px-4 pb-4" data-aos="zoom-in">
+          <div class="row">
+            <a  class="btn btn-primary2 py-4">Service 1</a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 px-4 pb-4" data-aos="zoom-in">
+          <div class="row">
+            <a  class="btn btn-primary2 py-4">Service 2</a>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 px-4 pb-4" data-aos="zoom-in">
+          <div class="row">
+            <a  class="btn btn-primary2 py-4">Service 3</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    </section>
+
+    <section id="courses" class="py-5 bg-body-tertiary">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-12 fs-1 fw-bold pb-2 text-center">
+            Latest <span style="color: var(--primary-color);">Courses</span>
+          </div>
+          <hr>
+
+          <div class="col-lg-3 col-md-4 col-11 pb-4" data-aos="zoom-in">
+            <a href="#" class="text-decoration-none">
+              <div class="card">
+                    <img src="./images/354466617_195358896814817_2572643186983354885_n.jpg" class="card-img-top" alt="image">
+                <div class="card-body">
+                  <h5 class="card-title fs-4">Course 1</h5>
+                    <ul>
+                        <li>Description</li>
+                    </ul>
+
+                  <div class="row justify-content-between align-self-center">
+                    <div class="col-12">
+                        <a  class="btn ownButtonBlue"><i class="bi bi-cart3 pe-2"></i> Enroll Now <i class="bi bi-arrow-right ps-2"></i></a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </a>
+          </div>
+          
+
+          <div class="col-12 text-center">
+            <a href="{{url('/allCourse')}}" class="btn btn-primary2 rounded-pill">See All</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="carousel">
+        
+        <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+              <div class="carousel-item active" data-bs-interval="5000">
+                <img src="./images/s1.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img src="./images/s2.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <img src="./images/s3.webp" class="d-block w-100" alt="...">
+              </div>
+              
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+    </section>
+
+    <section id="" class="py-5">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+
+          <div class="col-md-6 col-11 pb-3" data-aos="zoom-in">
+            <div class="card p-4 bg-body-tertiary">
+              <div class="row">
+                <div class="col-lg-6 col-md-4 text-center pb-2">
+                  <img src="https://cdn1.byjus.com/wp-content/uploads/2022/04/btla.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-6 col-md-8">
+                  <img src="./frontend/img/logos/logo.jpg" alt="">
+                  <p class="py-4">Personalised learning app to learn anytime, anywhere</p>
+                  <a href="{{url('/oneToOne')}}" class="btn ownButtonBlue">Know more <i class="bi bi-arrow-right ps-2"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-11 pb-3" data-aos="zoom-in">
+            <div class="card p-4 bg-body-tertiary">
+              <div class="row">
+                <div class="col-lg-6 col-md-4 text-center pb-2">
+                  <img src="https://cdn1.byjus.com/wp-content/uploads/2022/04/byjus-classes-tutor-img.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-lg-6 col-md-8">
+                  <img src="./frontend/img/logos/logo.jpg" alt="">
+                  <p class="py-4">Personalised online tutoring program with a unique model</p>
+                  <a href="{{url('/allLiveBatch')}}" class="btn ownButtonBlue">Know more <i class="bi bi-arrow-right ps-2"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="books" class="py-5">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-12 fs-1 fw-bold pb-2 text-center">
+            Best <span style="color: var(--primary-color);">Books</span>
+          </div>
+          <hr>
+
+          <div class="col-lg-3 col-md-4 col-11 pb-4" data-aos="zoom-in">
+            <a href="#" class="text-decoration-none">
+              <div class="card">
+                  <img src="" class="card-img-top" alt="title">
+                <div class="card-body">
+                  <h5 class="card-title text-center fs-4">title</h5>
+                  <h5 class="card-title text-center fs-3 fw-bold"><del class="fs-5 text-danger">prev_amount</del> amount &#2547;</h5>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="col-12 text-center">
+            <a href="{{url('/allBook')}}" class="btn btn-primary2 rounded-pill">See All</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-5" style="background: var(--primary-color); color:white;">
+      <div class="container py-5">
+        <div class="row py-3 justify-content-center align-items-center">
+          <div class="col-lg-7 pb-lg-0 pb-5" data-aos="fade-down">
+            <iframe src="https://www.facebook.com/plugins/video.php?height=420&href=https%3A%2F%2Fwww.facebook.com%2F100090221247299%2Fvideos%2F1589902991473199%2F&show_text=false&width=560&t=0" width="100%" height="350" style="border:none;overflow:hidden" class="rounded" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+          </div>
+          <div class="col-lg-5" data-aos="fade-up">
+            <h1 class="fs-1 text-center">intro_title</h1>
+            <hr>
+            <p class="fs-5" style="text-align: justify;">
+                intro_description
+            </p>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="#" class="btn btn-primary2 rounded-pill">Get Started</a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="py-5" style="background: #F4F4F4;">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-12 fs-1 fw-bold pb-2 text-center">
+            Our <span style="color: var(--primary-color);">Testimonial</span>
+          </div>
+          <hr>
+          
+          <div class="col-lg-4 col-md-6 col-10 pb-3" data-aos="zoom-in">
+            <div class="card p-4">
+              <div class="d-flex align-items-center justify-content-around">
+                <div>
+                      <img src="" class="rounded-circle" width="100px" height="100px" alt="{{$data->title}}">
+                </div>
+                <div>
+                  <h3>name</h3>
+                </div>
+              </div>
+              <hr>
+              <div style="height: 30vh;">
+                <p style="text-align: justify;">description</p>
+              </div>
+            </div>
+          </div>
+        
+          <div class="col-12 text-center">
+            <a href="{{url('/allTestimonial')}}" class="btn btn-primary2 rounded-pill">See All</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="blogs" class="py-5">
+        <div class="container py-5">
+          <div class="row justify-content-center">
+            <div class="col-12 fs-1 fw-bold pb-2 text-center">
+              Latest <span style="color: var(--primary-color);">Blogs</span>
+            </div>
+            <hr>
+
+            <div class="col-md-4 col-11 pb-4" data-aos="zoom-in">
+              <a  class="text-decoration-none">
+                <div class="card">
+                    <img src="" class="card-img-top" alt="image">
+                  <div class="card-body">
+                    <h5 class="card-title text-center fs-4">title</h5>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-12 text-center">
+              <a href="{{url('/allBlog')}}" class="btn btn-primary2 rounded-pill">See All</a>
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+    <section id="galleries" class="py-5">
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-12 fs-1 fw-bold pb-2 text-center">
+            Our <span style="color: var(--primary-color);">Gallery</span>
+          </div>
+          <hr>
+
+          
+            <div class="col-lg-2 col-md-4 col-6 pb-3">
+              <a href="#" data-bs-toggle="modal" data-bs-target="#Gallery">
+                <div class="card p-2">
+                  <img src="" alt="gallery" width="100%" height="100px">
+                </div>
+              </a>
+            </div>
+            <!-- Gallery -->
+            <div class="modal fade" id="Gallery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-xl modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body text-center">
+                      <img src="" alt="gallery" class="img-fluid">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+
+          <div class="col-12 text-center">
+            <a href="{{url('/allGallery')}}" class="btn btn-primary2 rounded-pill">See All</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="bg-body-tertiary">
+      <div class="container">
+        <div class="row justify-content-center">
+
+          <div class="col-md-4 text-md-start text-center">
+            <div class="py-4">
+                <!-- <span class="fs-3 fw-bold">Ovijan</span> -->
+              <a href="#"><img src="./images/logo.jpg" alt="image" class="brandLogo"></a>
+            </div>
+            <div>
+              <p class="fw-bold">Office Information:</p>
+              <p>
+                <i class="bi bi-geo-alt-fill pe-2"></i>
+                address
+              </p>
+              <p>
+                <i class="bi bi-envelope-paper-fill pe-2"></i>
+                email
+              </p>
+              <p>
+                <i class="bi bi-telephone-outbound-fill pe-2"></i>
+                mobile
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 text-md-start text-center">
+            <div>
+              <h4 class="pt-4">Useful Links:</h4>
+              <ul>
+                <li><a class="text-decoration-none">Courses</a></li>
+                <li><a class="text-decoration-none">Books</a></li>
+                <li><a class="text-decoration-none">Testimonials</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div>
+              <h4 class="pt-4">Keep up with us at:</h4>
+              <hr class="my-0">
+              <div class="pt-2">
+                
+                <a href="#" target="_blank">
+                        <img class="rounded-circle sIcon" src="">
+                </a>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <hr>
+        <div class="row text-center">
+          <p>
+          2024 Copyright ©
+          <span style="color: var(--primary-color);font-weight: bold;">Ovijan</span>.
+          All rights reserved. Develop By
+          <span style="color: var(--primary-color);font-weight: bold;">Bae Innovation</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+
+    <style>
+        .sIconContainer{
+            height:100vh;
+            background:transparent;
+            display:flex;
+            align-items:center;
+            position:fixed;
+            right:5px;
+            top:0px;
+            z-index:1000;
+        }
+        .sIcon{
+            opacity:.7;
+            width:40px;
+            height:auto;
+        }
+        .sIcon:hover{
+            opacity:1;
+        }
+    </style>
+    <div class="sIconContainer">
+        <div class=" d-inline-block" >
+            
+            <div class="pb-2">
+                <a href="{{$data->link}}" target="_blank">
+                        <img class="rounded-circle sIcon" src="">
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <!--whatsapp2-->
+    <a data-aos="zoom-in" href="https://wa.me/8801615112358" style="position: fixed; left:20px; bottom:70px;">
+        <img src="./images/whatsapp.jpg" width="50px" height="auto" alt="whatsapp" class="rounded-circle">
+    </a>
+    <!--scrol to top-->
+    <a data-aos="zoom-in" href="#" style="position:fixed;right:10px;bottom:10px; color: var(--primary-color);z-index:2000;"><i class="bi bi-arrow-up-circle-fill display-5"></i></a>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({offset: 200,duration: 500,});</script>
+
+
+    <!--ajax js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--toastr js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // @if(Session::has('success'))
+        //     toastr.options={ "closeButton":true, "progressBar":true, }
+        //     toastr.success("{{ session('success')}}")
+        // @endif
+        // @if(Session::has('error'))
+        //     toastr.options={ "closeButton":true, "progressBar":true, }
+        //     toastr.error("{{ session('error')}}")
+        // @endif
+    </script>
+
+    <!--MASSANGER START-->
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "122116274624001605");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v18.0'
+        });
+      };
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!--MASSANGER END-->
+
+  </body>
+</html>
