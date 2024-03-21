@@ -1,0 +1,187 @@
+/* body */
+*{
+  font-family: "Nunito", sans-serif;
+}
+:root{
+  --primary-color: #076943;
+  --primary-color2: #53b949;
+}
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.btn-primary2 {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--primary-color);
+  --bs-btn-border-color: var(--primary-color);
+
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--primary-color2);
+  --bs-btn-hover-border-color: var(--primary-color2);
+
+  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--primary-color2);
+  --bs-btn-active-border-color: var(--primary-color2);
+
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: var(--primary-color2);
+  --bs-btn-disabled-border-color: var(--primary-color2);
+
+  font-size: 1.2rem;
+  padding: .5rem 2rem;
+  font-weight: 600;
+}
+.ownButtonPurple {
+  border-radius: 26px;
+  color: #fff;
+  text-align: center;
+  padding: 8px 20px;
+  border: none;
+  line-height: 24px;
+  font-size: 18px;
+  box-shadow: 0px 5px 15px -5px rgb(0 0 0 / 78%);
+  background: linear-gradient(to right,#BF00FF,#562270);
+}
+.ownButtonPurple:hover{
+  color: white;
+  background: linear-gradient(to right, #562270,#BF00FF);
+}
+.ownButtonOrange {
+  border-radius: 26px;
+  color: #fff;
+  text-align: center;
+  padding: 8px 20px;
+  border: none;
+  line-height: 24px;
+  font-size: 18px;
+  box-shadow: 0px 5px 15px -5px rgb(0 0 0 / 78%);
+  background: transparent linear-gradient(110deg, #EF512E 0%, #DE0655 100%) 0% 0% no-repeat padding-box;
+}
+.ownButtonOrange:hover{
+  color: white;
+  background: transparent linear-gradient(110deg, #DE0655 0%, #EF512E 100%) 0% 0% no-repeat padding-box;
+}
+
+.ownButtonBlue {
+  text-decoration: none;
+  border-radius: 26px;
+  color: #fff;
+  text-align: center;
+  padding: 8px 20px;
+  border: none;
+  line-height: 24px;
+  font-size: 18px;
+  box-shadow: 0px 5px 15px -5px rgb(0 0 0 / 78%);
+  background: linear-gradient(to right,var(--primary-color),var(--primary-color2));
+}
+.ownButtonBlue:hover{
+  color: white;
+  background: linear-gradient(to right, var(--primary-color2),var(--primary-color));
+}
+.social:hover{
+  color: var(--primary-color) !important;
+}
+
+/* nav */
+.brandLogo{
+  width: 100px;
+  height: auto;
+}
+.nav-link {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--bs-nav-link-color);
+  text-decoration: none;
+  background: 0 0;
+  border: 0;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+.nav-link:focus, .nav-link:hover {
+  color: var(--primary-color);
+  margin-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  transition: .2s;
+}
+
+/* marquee */
+.notices-container { 
+  overflow: hidden; 
+}
+.notices-list { white-space: nowrap; animation: scroll 25s linear infinite; }
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-170%); }
+}
+
+/* banner */
+
+
+/* services */
+
+
+/* courses */
+.card{
+  cursor: pointer;
+}
+.card:hover{
+  color: var(--primary-color);
+  box-shadow: 0px 0px 10px var(--primary-color);
+  transition: .5s;
+}
+
+/* carousel */
+
+
+/* batches */
+
+
+/* books */
+
+
+/* about */
+
+
+/* testimonials */
+
+
+/* blogs */
+
+
+/* galleries */
+
+
+/* footer */
+
+
+/* sIconContainer */
+.sIconContainer{
+  height:100vh;
+  background:transparent;
+  display:flex;
+  align-items:center;
+  position:fixed;
+  right:5px;
+  top:0px;
+  z-index:1000;
+}
+.sIcon{
+  opacity:.7;
+  width:40px;
+  height:auto;
+}
+.sIcon:hover{
+  opacity:1;
+}
+

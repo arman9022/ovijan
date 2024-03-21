@@ -29,131 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Acme&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
 
-<style>
-    *{
-    font-family: "Nunito", sans-serif;
-    }
-    :root{
-    --primary-color: #076943;
-    --primary-color2: #53b949;
-    }
-    a{
-        text-decoration: none;
-        color: var(--primary-color);
-    }
-    .brandLogo{
-      width: 100px;
-      height: auto;
-    }
-    .btn-primary2 {
-
-        --bs-btn-color: #fff;
-        --bs-btn-bg: var(--primary-color);
-        --bs-btn-border-color: var(--primary-color);
-
-        --bs-btn-hover-color: #fff;
-        --bs-btn-hover-bg: var(--primary-color2);
-        --bs-btn-hover-border-color: var(--primary-color2);
-
-        --bs-btn-focus-shadow-rgb: 49,132,253;
-        --bs-btn-active-color: #fff;
-        --bs-btn-active-bg: var(--primary-color2);
-        --bs-btn-active-border-color: var(--primary-color2);
-
-        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-        --bs-btn-disabled-color: #fff;
-        --bs-btn-disabled-bg: var(--primary-color2);
-        --bs-btn-disabled-border-color: var(--primary-color2);
-
-        font-size: 1.2rem;
-        padding: .5rem 2rem;
-        font-weight: 600;
-    }
-    .nav-link {
-        display: block;
-        padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-        font-size: var(--bs-nav-link-font-size);
-        font-weight: var(--bs-nav-link-font-weight);
-        color: var(--bs-nav-link-color);
-        text-decoration: none;
-        background: 0 0;
-        border: 0;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-
-        font-size: 1.2rem;
-        font-weight: 600;
-        border-bottom: 2px solid transparent;
-    }
-    .navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-        color: var(--primary-color);
-        border-bottom: 2px solid var(--primary-color);
-    }
-    .nav-link:focus, .nav-link:hover {
-        color: var(--primary-color);
-        margin-bottom: 2px solid var(--primary-color);
-        border-bottom: 2px solid var(--primary-color);
-        transition: .2s;
-    }
-    .card{
-    cursor: pointer;
-    }
-    .card:hover{
-    color: var(--primary-color);
-    box-shadow: 0px 0px 10px var(--primary-color);
-    transition: .5s;
-    }
-    .social:hover{
-    color: var(--primary-color) !important;
-    }
-
-    .ownButtonPurple {
-        border-radius: 26px;
-        color: #fff;
-        text-align: center;
-        padding: 8px 20px;
-        border: none;
-        line-height: 24px;
-        font-size: 18px;
-        box-shadow: 0px 5px 15px -5px rgb(0 0 0 / 78%);
-        background: linear-gradient(to right,#BF00FF,#562270);
-    }
-    .ownButtonPurple:hover{
-    color: white;
-        background: linear-gradient(to right, #562270,#BF00FF);
-    }
-    .ownButtonOrange {
-        border-radius: 26px;
-        color: #fff;
-        text-align: center;
-        padding: 8px 20px;
-        border: none;
-        line-height: 24px;
-        font-size: 18px;
-        box-shadow: 0px 5px 15px -5px rgb(0 0 0 / 78%);
-        background: transparent linear-gradient(110deg, #EF512E 0%, #DE0655 100%) 0% 0% no-repeat padding-box;
-    }
-    .ownButtonOrange:hover{
-    color: white;
-        background: transparent linear-gradient(110deg, #DE0655 0%, #EF512E 100%) 0% 0% no-repeat padding-box;
-    }
-
-    .ownButtonBlue {
-        text-decoration: none;
-        border-radius: 26px;
-        color: #fff;
-        text-align: center;
-        padding: 8px 20px;
-        border: none;
-        line-height: 24px;
-        font-size: 18px;
-        box-shadow: 0px 5px 15px -5px rgb(0 0 0 / 78%);
-        background: linear-gradient(to right,var(--primary-color),var(--primary-color2));
-    }
-    .ownButtonBlue:hover{
-        color: white;
-        background: linear-gradient(to right, var(--primary-color2),var(--primary-color));
-    }
-</style>
+    <link rel="stylesheet" href="./main.css">
 
   </head>
   <body>
@@ -202,15 +78,7 @@
       </div>
     </nav>
 
-    <style>
-      .notices-container { overflow: hidden; }
-      .notices-list { white-space: nowrap; animation: scroll 25s linear infinite; }
-      @keyframes scroll {
-          0% { transform: translateX(100%); }
-          100% { transform: translateX(-170%); }
-      }
-    </style>
-    <section class="py-2" style="background: var(--primary-color);">
+    <section id="marquee" class="py-2" style="background: var(--primary-color);">
         <div class="container">
             <div class="row">
                 <div class="col-xl-1 col-md-2 col-3 bg-white fs-5 text-center" style="color:var(--primary-color);">Notice :</div>
@@ -404,16 +272,68 @@
           <div class="col-lg-3 col-md-4 col-11 pb-4" data-aos="zoom-in">
             <a href="#" class="text-decoration-none">
               <div class="card">
-                    <img src="./images/354466617_195358896814817_2572643186983354885_n.jpg" class="card-img-top" alt="image">
+                    <img src="./images/s1.jpg" class="card-img-top" alt="image">
                 <div class="card-body">
                   <h5 class="card-title fs-4">Course 1</h5>
-                    <ul>
+                    <!-- <ul>
                         <li>Description</li>
-                    </ul>
+                    </ul> -->
 
                   <div class="row justify-content-between align-self-center">
                     <div class="col-12">
-                        <a  class="btn ownButtonBlue"><i class="bi bi-cart3 pe-2"></i> Enroll Now <i class="bi bi-arrow-right ps-2"></i></a>
+                        <a  class="btn ownButtonBlue">
+                          <!-- <i class="bi bi-cart3 pe-2"></i> -->
+                           See Details  
+                          <i class="bi bi-arrow-right ps-2"></i>
+                        </a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-11 pb-4" data-aos="zoom-in">
+            <a href="#" class="text-decoration-none">
+              <div class="card">
+                    <img src="./images/s2.webp" class="card-img-top" alt="image">
+                <div class="card-body">
+                  <h5 class="card-title fs-4">Course 2</h5>
+                    <!-- <ul>
+                        <li>Description</li>
+                    </ul> -->
+
+                  <div class="row justify-content-between align-self-center">
+                    <div class="col-12">
+                      <a  class="btn ownButtonBlue">
+                        <!-- <i class="bi bi-cart3 pe-2"></i> -->
+                         See Details  
+                        <i class="bi bi-arrow-right ps-2"></i>
+                      </a>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-11 pb-4" data-aos="zoom-in">
+            <a href="#" class="text-decoration-none">
+              <div class="card">
+                    <img src="./images/s3.webp" class="card-img-top" alt="image">
+                <div class="card-body">
+                  <h5 class="card-title fs-4">Course 3</h5>
+                    <!-- <ul>
+                        <li>Description</li>
+                    </ul> -->
+
+                  <div class="row justify-content-between align-self-center">
+                    <div class="col-12">
+                      <a  class="btn ownButtonBlue">
+                        <!-- <i class="bi bi-cart3 pe-2"></i> -->
+                         See Details  
+                        <i class="bi bi-arrow-right ps-2"></i>
+                      </a>
                     </div>
                   </div>
                   
@@ -424,7 +344,7 @@
           
 
           <div class="col-12 text-center">
-            <a href="{{url('/allCourse')}}" class="btn btn-primary2 rounded-pill">See All</a>
+            <a href="#" class="btn btn-primary2 rounded-pill">See All</a>
           </div>
 
         </div>
@@ -459,7 +379,7 @@
         
     </section>
 
-    <section id="" class="py-5">
+    <section id="batches" class="py-5">
       <div class="container py-5">
         <div class="row justify-content-center">
 
@@ -471,8 +391,8 @@
                 </div>
                 <div class="col-lg-6 col-md-8">
                   <img src="./frontend/img/logos/logo.jpg" alt="">
-                  <p class="py-4">Personalised learning app to learn anytime, anywhere</p>
-                  <a href="{{url('/oneToOne')}}" class="btn ownButtonBlue">Know more <i class="bi bi-arrow-right ps-2"></i></a>
+                  <p class="py-4 fs-5">Personalised learning app to learn anytime, anywhere</p>
+                  <a href="#" class="btn ownButtonBlue">Know more <i class="bi bi-arrow-right ps-2"></i></a>
                 </div>
               </div>
             </div>
@@ -485,8 +405,8 @@
                 </div>
                 <div class="col-lg-6 col-md-8">
                   <img src="./frontend/img/logos/logo.jpg" alt="">
-                  <p class="py-4">Personalised online tutoring program with a unique model</p>
-                  <a href="{{url('/allLiveBatch')}}" class="btn ownButtonBlue">Know more <i class="bi bi-arrow-right ps-2"></i></a>
+                  <p class="py-4 fs-5">Personalised online tutoring program with a unique model</p>
+                  <a href="#" class="btn ownButtonBlue">Know more <i class="bi bi-arrow-right ps-2"></i></a>
                 </div>
               </div>
             </div>
@@ -515,64 +435,64 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-md-4 col-11 pb-4" data-aos="zoom-in">
+          <!-- <div class="col-lg-3 col-md-4 col-11 pb-4" data-aos="zoom-in">
             <a href="#" class="text-decoration-none">
               <div class="card">
                   <img src="./images/p2.webp" class="card-img-top" alt="title">
                 <div class="card-body">
                   <h5 class="card-title text-center fs-4">Physics 1st Paper</h5>
-                  <!-- <h5 class="card-title text-center fs-3 fw-bold"><del class="fs-5 text-danger">prev_amount</del> amount &#2547;</h5> -->
+                  <h5 class="card-title text-center fs-3 fw-bold"><del class="fs-5 text-danger">prev_amount</del> amount &#2547;</h5>
                 </div>
               </div>
             </a>
-          </div>
+          </div> -->
           <div class="col-lg-3 col-md-4 col-11 pb-4" data-aos="zoom-in">
             <a href="#" class="text-decoration-none">
               <div class="card">
                   <img src="./images/c1.webp" class="card-img-top" alt="title">
                 <div class="card-body">
-                  <h5 class="card-title text-center fs-4">Physics 1st Paper</h5>
+                  <h5 class="card-title text-center fs-4">Chemistry 1st Paper</h5>
                   <!-- <h5 class="card-title text-center fs-3 fw-bold"><del class="fs-5 text-danger">prev_amount</del> amount &#2547;</h5> -->
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-md-4 col-11 pb-4" data-aos="zoom-in">
+          <!-- <div class="col-lg-3 col-md-4 col-11 pb-4" data-aos="zoom-in">
             <a href="#" class="text-decoration-none">
               <div class="card">
                   <img src="./images/c2.webp" class="card-img-top" alt="title">
                 <div class="card-body">
                   <h5 class="card-title text-center fs-4">Physics 2st Paper</h5>
-                  <!-- <h5 class="card-title text-center fs-3 fw-bold"><del class="fs-5 text-danger">prev_amount</del> amount &#2547;</h5> -->
+                  <h5 class="card-title text-center fs-3 fw-bold"><del class="fs-5 text-danger">prev_amount</del> amount &#2547;</h5>
                 </div>
               </div>
             </a>
-          </div>
+          </div> -->
           <div class="col-lg-3 col-md-4 col-11 pb-4" data-aos="zoom-in">
             <a href="#" class="text-decoration-none">
               <div class="card">
                   <img src="./images/m1.webp" class="card-img-top" alt="title">
                 <div class="card-body">
-                  <h5 class="card-title text-center fs-4">Physics 1st Paper</h5>
+                  <h5 class="card-title text-center fs-4">Math 1st Paper</h5>
                   <!-- <h5 class="card-title text-center fs-3 fw-bold"><del class="fs-5 text-danger">prev_amount</del> amount &#2547;</h5> -->
                 </div>
               </div>
             </a>
           </div>
-          <div class="col-lg-3 col-md-4 col-11 pb-4" data-aos="zoom-in">
+          <!-- <div class="col-lg-3 col-md-4 col-11 pb-4" data-aos="zoom-in">
             <a href="#" class="text-decoration-none">
               <div class="card">
                   <img src="./images/m2.webp" class="card-img-top" alt="title">
                 <div class="card-body">
                   <h5 class="card-title text-center fs-4">Physics 1st Paper</h5>
-                  <!-- <h5 class="card-title text-center fs-3 fw-bold"><del class="fs-5 text-danger">prev_amount</del> amount &#2547;</h5> -->
+                  <h5 class="card-title text-center fs-3 fw-bold"><del class="fs-5 text-danger">prev_amount</del> amount &#2547;</h5>
                 </div>
               </div>
             </a>
-          </div>
+          </div> -->
 
           <div class="col-12 text-center">
-            <a href="{{url('/allBook')}}" class="btn btn-primary2 rounded-pill">See All</a>
+            <a href="#" class="btn btn-primary2 rounded-pill">See All</a>
           </div>
 
         </div>
@@ -586,14 +506,14 @@
             <iframe src="https://www.facebook.com/plugins/video.php?height=420&href=https%3A%2F%2Fwww.facebook.com%2F100090221247299%2Fvideos%2F1589902991473199%2F&show_text=false&width=560&t=0" width="100%" height="350" style="border:none;overflow:hidden" class="rounded" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
           </div>
           <div class="col-lg-5" data-aos="fade-up">
-            <h1 class="fs-1 text-center">intro_title</h1>
+            <h1 class="fs-1 text-center">Introduction</h1>
             <hr>
             <p class="fs-5" style="text-align: justify;">
-                intro_description
+              Academic and Admission based Coaching Center For HSC science Students of Bangladesh
             </p>
             <div class="row">
                 <div class="col-12 text-center">
-                    <a href="#" class="btn btn-primary2 rounded-pill">Get Started</a>
+                    <a href="#" class="btn btn-light fw-bold px-4 py-2 rounded-pill">Get Started</a>
                 </div>
             </div>
           </div>
@@ -627,7 +547,7 @@
           </div>
         
           <div class="col-12 text-center">
-            <a href="{{url('/allTestimonial')}}" class="btn btn-primary2 rounded-pill">See All</a>
+            <a href="#" class="btn btn-primary2 rounded-pill">See All</a>
           </div>
 
         </div>
@@ -645,7 +565,7 @@
             <div class="col-md-4 col-11 pb-4" data-aos="zoom-in">
               <a  class="text-decoration-none">
                 <div class="card">
-                    <img src="" class="card-img-top" alt="image">
+                    <img src="./images/s1.jpg" class="card-img-top" alt="image">
                   <div class="card-body">
                     <h5 class="card-title text-center fs-4">title</h5>
                   </div>
@@ -654,7 +574,7 @@
             </div>
 
             <div class="col-12 text-center">
-              <a href="{{url('/allBlog')}}" class="btn btn-primary2 rounded-pill">See All</a>
+              <a href="#" class="btn btn-primary2 rounded-pill">See All</a>
             </div>
 
           </div>
@@ -697,13 +617,12 @@
           
 
           <div class="col-12 text-center">
-            <a href="{{url('/allGallery')}}" class="btn btn-primary2 rounded-pill">See All</a>
+            <a href="#" class="btn btn-primary2 rounded-pill">See All</a>
           </div>
 
         </div>
       </div>
     </section>
-
 
     <footer class="bg-body-tertiary">
       <div class="container">
@@ -718,15 +637,15 @@
               <p class="fw-bold">Office Information:</p>
               <p>
                 <i class="bi bi-geo-alt-fill pe-2"></i>
-                address
+                Shamsur Rahman Road, Shantidham, Khulna, Bangladesh
               </p>
               <p>
                 <i class="bi bi-envelope-paper-fill pe-2"></i>
-                email
+                ovijaneducation@gmail.com
               </p>
               <p>
                 <i class="bi bi-telephone-outbound-fill pe-2"></i>
-                mobile
+                01729-501506
               </p>
             </div>
           </div>
@@ -767,33 +686,22 @@
       </div>
     </footer>
 
-
-    <style>
-        .sIconContainer{
-            height:100vh;
-            background:transparent;
-            display:flex;
-            align-items:center;
-            position:fixed;
-            right:5px;
-            top:0px;
-            z-index:1000;
-        }
-        .sIcon{
-            opacity:.7;
-            width:40px;
-            height:auto;
-        }
-        .sIcon:hover{
-            opacity:1;
-        }
-    </style>
     <div class="sIconContainer">
         <div class=" d-inline-block" >
             
             <div class="pb-2">
-                <a href="{{$data->link}}" target="_blank">
-                        <img class="rounded-circle sIcon" src="">
+                <a  target="_blank">
+                    <img class="rounded-circle sIcon" src="./images/facebook.svg">
+                </a>
+            </div>
+            <div class="pb-2">
+                <a  target="_blank">
+                    <img class="rounded-circle sIcon" src="./images/youtube.svg">
+                </a>
+            </div>
+            <div class="pb-2">
+                <a  target="_blank">
+                    <img class="rounded-circle sIcon" src="./images/instagram.svg">
                 </a>
             </div>
             
@@ -801,7 +709,7 @@
     </div>
 
     <!--whatsapp2-->
-    <a data-aos="zoom-in" href="https://wa.me/8801615112358" style="position: fixed; left:20px; bottom:70px;">
+    <a data-aos="zoom-in" href="https://wa.me/8801632109022" style="position: fixed; left:20px; bottom:70px; z-index: 1;">
         <img src="./images/whatsapp.jpg" width="50px" height="auto" alt="whatsapp" class="rounded-circle">
     </a>
     <!--scrol to top-->
