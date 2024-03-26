@@ -141,6 +141,42 @@ a{
   transition: .5s;
 }
 
+.courseInCard{
+  background: #fff;
+  border-radius: 1rem;
+}
+.courseCardLink{
+  text-decoration: none;
+  color: black;
+}
+.courseCard:hover{
+  box-shadow: 0px 0px 10px var(--primary-color2);
+}
+.courseCardTitle{
+  min-height: 10vh;
+}
+.cardCycle{
+  border-radius: 1rem;
+  /* background: var(--primary-color1); */
+  border: 5px solid var(--primary-color2);
+}
+.cardCycle:hover{
+  background: var(--primary-color2);
+  border: 5px solid var(--primary-color2);
+  color: white;
+}
+.linkCycle{
+  text-decoration: none;
+  color: black;
+}
+
+
+/* breadcrumb-item */
+.breadcrumb-item a{
+  text-decoration: none;
+  color: var(--primary-color2);
+}
+
 /* carousel */
 
 

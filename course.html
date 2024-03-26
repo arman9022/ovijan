@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ovijan</title>
+
+    <link href="./images/icon.png" rel="icon">
+    <link href="./images/icon.png" rel="apple-touch-icon">
+    <link href="./images/icon.png" rel="shortcut icon" type="image/x-icon">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+
+    <!--toastr css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./main.css">
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#" style="font-family: Acme;">
+                <img src="./images/logo.jpg" alt="Logo" class="brandLogo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="#books">Books</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+                <li><a class="dropdown-item" href="#blogs">Blogs</a></li>
+                <li><a class="dropdown-item" href="#galleries">Galleries</a></li>
+                <!--<li><hr class="dropdown-divider"></li>-->
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Account
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Login</a></li>
+                <li><a class="dropdown-item" href="#">Register</a></li>
+                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a href="#about" class="btn btn-primary2 rounded-pill">Get Started</a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="courses" class="py-5">
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-12">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Physics HSC-25</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center">
+
+          <div class="col-12 pb-4">
+            <div class="courseInCard courseCard card p-md-3 p-3">
+              <div class="row justify-content-start align-items-center">
+                <div class="col-lg-3 col-md-6">
+                  <div class="card">
+                    <img src="./images/p_course.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title courseCardTitle fw-bold">Physics 1st Paper</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-9">
+                  <div class="row justify-content-start align-items-center pt-3">
+
+                    <div class="col-lg-4 pb-md-3 pb-2">
+                      <a href="./chapter.html" class="linkCycle">
+                        <div class="cardCycle py-4 px-1">
+                          <h1 class="text-center">Cycle-1</h1>
+                          <hr>
+                          <div class="text-center">
+                            <span class="badge text-bg-secondary">Chapter 1</span>
+                            <span class="badge text-bg-secondary">Chapter 2</span>
+                            <span class="badge text-bg-secondary">Chapter 3</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-4 pb-md-3 pb-2">
+                      <a href="#" class="linkCycle">
+                        <div class="cardCycle py-4 px-1">
+                          <h1 class="text-center">Cycle-2</h1>
+                          <hr>
+                          <div class="text-center">
+                            <span class="badge text-bg-secondary">Chapter 4</span>
+                            <span class="badge text-bg-secondary">Chapter 5</span>
+                            <span class="badge text-bg-secondary">Chapter 6</span>
+                            <span class="badge text-bg-secondary">Chapter 7</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-4 pb-md-3 pb-2">
+                      <a href="#" class="linkCycle">
+                        <div class="cardCycle py-4 px-1">
+                          <h1 class="text-center">Cycle-3</h1>
+                          <hr>
+                          <div class="text-center">
+                            <span class="badge text-bg-secondary">Chapter 8</span>
+                            <span class="badge text-bg-secondary">Chapter 9</span>
+                            <span class="badge text-bg-secondary">Chapter 10</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 pb-4">
+            <div class="courseInCard courseCard card p-md-3 p-3">
+              <div class="row justify-content-start align-items-center">
+                <div class="col-lg-3 col-md-6">
+                  <div class="card">
+                    <img src="./images/p_course.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title courseCardTitle fw-bold">Physics 2nd Paper</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-9">
+                  <div class="row justify-content-start align-items-center pt-3">
+
+                    <div class="col-lg-4 pb-md-3 pb-2">
+                      <a href="#" class="linkCycle">
+                        <div class="cardCycle py-4 px-1">
+                          <h1 class="text-center">Cycle-1</h1>
+                          <hr>
+                          <div class="text-center">
+                            <span class="badge text-bg-secondary">Chapter 1</span>
+                            <span class="badge text-bg-secondary">Chapter 2</span>
+                            <span class="badge text-bg-secondary">Chapter 3</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-4 pb-md-3 pb-2">
+                      <a href="#" class="linkCycle">
+                        <div class="cardCycle py-4 px-1">
+                          <h1 class="text-center">Cycle-2</h1>
+                          <hr>
+                          <div class="text-center">
+                            <span class="badge text-bg-secondary">Chapter 4</span>
+                            <span class="badge text-bg-secondary">Chapter 5</span>
+                            <span class="badge text-bg-secondary">Chapter 6</span>
+                            <span class="badge text-bg-secondary">Chapter 7</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-lg-4 pb-md-3 pb-2">
+                      <a href="#" class="linkCycle">
+                        <div class="cardCycle py-4 px-1">
+                          <h1 class="text-center">Cycle-3</h1>
+                          <hr>
+                          <div class="text-center">
+                            <span class="badge text-bg-secondary">Chapter 8</span>
+                            <span class="badge text-bg-secondary">Chapter 9</span>
+                            <span class="badge text-bg-secondary">Chapter 10</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        
+      </div>
+    </section>
+
+    <footer class="bg-body-tertiary">
+      <div class="container">
+        <div class="row justify-content-center">
+
+          <div class="col-md-4 text-md-start text-center">
+            <div class="py-4">
+                <!-- <span class="fs-3 fw-bold">Ovijan</span> -->
+              <a href="#"><img src="./images/logo.jpg" alt="image" class="brandLogo"></a>
+            </div>
+            <div>
+              <p class="fw-bold">Office Information:</p>
+              <p>
+                <i class="bi bi-geo-alt-fill pe-2"></i>
+                Shamsur Rahman Road, Shantidham, Khulna, Bangladesh
+              </p>
+              <p>
+                <i class="bi bi-envelope-paper-fill pe-2"></i>
+                ovijaneducation@gmail.com
+              </p>
+              <p>
+                <i class="bi bi-telephone-outbound-fill pe-2"></i>
+                01729-501506
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 text-md-start text-center">
+            <div>
+              <h4 class="pt-4">Useful Links:</h4>
+              <ul>
+                <li><a class="text-decoration-none">Courses</a></li>
+                <li><a class="text-decoration-none">Books</a></li>
+                <li><a class="text-decoration-none">Testimonials</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div>
+              <h4 class="pt-4">Keep up with us at:</h4>
+              <hr class="my-0">
+              <div class="pt-2">
+                
+                <a href="#" target="_blank">
+                        <img class="rounded-circle sIcon" src="">
+                </a>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <hr>
+        <div class="row text-center">
+          <p>
+          2024 Copyright ©
+          <span style="color: var(--primary-color);font-weight: bold;">Ovijan</span>.
+          All rights reserved. Develop By
+          <span style="color: var(--primary-color);font-weight: bold;">Bae Innovation</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="sIconContainer">
+        <div class=" d-inline-block" >
+            
+            <div class="pb-2">
+                <a  target="_blank">
+                    <img class="rounded-circle sIcon" src="./images/facebook.svg">
+                </a>
+            </div>
+            <div class="pb-2">
+                <a  target="_blank">
+                    <img class="rounded-circle sIcon" src="./images/youtube.svg">
+                </a>
+            </div>
+            <div class="pb-2">
+                <a  target="_blank">
+                    <img class="rounded-circle sIcon" src="./images/instagram.svg">
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <!--whatsapp2-->
+    <a data-aos="zoom-in" href="https://wa.me/8801632109022" style="position: fixed; left:20px; bottom:70px; z-index: 1;">
+        <img src="./images/whatsapp.jpg" width="50px" height="auto" alt="whatsapp" class="rounded-circle">
+    </a>
+    <!--scrol to top-->
+    <a data-aos="zoom-in" href="#" style="position:fixed;right:10px;bottom:10px; color: var(--primary-color);z-index:2000;"><i class="bi bi-arrow-up-circle-fill display-5"></i></a>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init({offset: 200,duration: 500,});</script>
+
+
+    <!--ajax js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--toastr js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // @if(Session::has('success'))
+        //     toastr.options={ "closeButton":true, "progressBar":true, }
+        //     toastr.success("{{ session('success')}}")
+        // @endif
+        // @if(Session::has('error'))
+        //     toastr.options={ "closeButton":true, "progressBar":true, }
+        //     toastr.error("{{ session('error')}}")
+        // @endif
+    </script>
+
+    <!--MASSANGER START-->
+    <div id="fb-root"></div>
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "122116274624001605");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v18.0'
+        });
+      };
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!--MASSANGER END-->
+
+  </body>
+</html>
